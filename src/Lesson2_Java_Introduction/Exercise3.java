@@ -5,6 +5,11 @@ import java.util.Scanner;
 public class Exercise3 {
     private static int n;
 
+    public static void main(String[] args) {
+        Input();
+        PrintTriangle();
+    }
+
     private static void Input() {
         Scanner keyboard = new Scanner(System.in);
         while (true) {
@@ -41,8 +46,5 @@ public class Exercise3 {
         }
     }
 
-    public static void main(String[] args) {
-        Input();
-        PrintTriangle();
-    }
+
 }
