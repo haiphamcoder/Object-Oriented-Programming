@@ -35,7 +35,6 @@ public class Exercise3 {
             int numberSpace = (length - numberStar) / 2;
             printCharacter(' ', numberSpace);
             printCharacter('*', numberStar);
-            printCharacter(' ', numberSpace);
             System.out.println();
         }
     }
@@ -45,6 +44,4 @@ public class Exercise3 {
             System.out.print(x + " ");
         }
     }
-
-
 }
