@@ -3,9 +3,10 @@ package Lesson2_Java_Introduction;
 import java.util.Scanner;
 
 public class Exercise3 {
-    public static void main(String[] args) {
+    private static int n;
+
+    private static void Input() {
         Scanner keyboard = new Scanner(System.in);
-        int n;
         while (true) {
             System.out.print("Nhap chieu cao (2-10): ");
             try {
@@ -19,6 +20,9 @@ public class Exercise3 {
                 System.out.println("Loi roi! Hay nhap lai!");
             }
         }
+    }
+
+    private static void PrintTriangle() {
         System.out.println();
         int length = 2 * n - 1;
         for (int i = 1; i <= n; i++) {
@@ -31,9 +35,14 @@ public class Exercise3 {
         }
     }
 
-    public static void printCharacter(char x, int n) {
+    private static void printCharacter(char x, int n) {
         for (int i = 0; i < n; i++) {
             System.out.print(x + " ");
         }
+    }
+
+    public static void main(String[] args) {
+        Input();
+        PrintTriangle();
     }
 }
