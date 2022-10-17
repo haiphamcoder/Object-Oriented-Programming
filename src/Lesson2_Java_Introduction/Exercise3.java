@@ -29,12 +29,12 @@ public class Exercise3 {
 
     private static void PrintTriangle() {
         System.out.println();
-        int length = 2 * n - 1;
+        int numberSpace = n - 1;
+        int numberStar = 1;
         for (int i = 1; i <= n; i++) {
-            int numberStar = 2 * i - 1;
-            int numberSpace = (length - numberStar) / 2;
-            printCharacter(' ', numberSpace);
+            printCharacter(' ', numberSpace--);
             printCharacter('*', numberStar);
+            numberStar += 2;
             System.out.println();
         }
     }
