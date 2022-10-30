@@ -31,31 +31,31 @@ public class Exercise4 {
 
     private static void CompleteMatrix() {
         x = new int[n + 1][n + 1];
-        int maxH = n, maxC = n, minC = 1, minH = 1, value = 1;
+        int maxRow = n, maxCol = n, minCol = 1, minRow = 1, value = 1;
         while (value <= n * n) {
             // Hang tren cung chua ghi
-            for (int i = minC; i <= maxC; i++) {
-                x[minH][i] = value++;
+            for (int i = minCol; i <= maxCol; i++) {
+                x[minRow][i] = value++;
             }
-            minH++;
+            minRow++;
 
             // Cot phai cung chua ghi
-            for (int i = minH; i <= maxH; i++) {
-                x[i][maxC] = value++;
+            for (int i = minRow; i <= maxRow; i++) {
+                x[i][maxCol] = value++;
             }
-            maxC--;
+            maxCol--;
 
             // Hang duoi cung chua ghi
-            for (int i = maxC; i >= minC; i--) {
-                x[maxH][i] = value++;
+            for (int i = maxCol; i >= minCol; i--) {
+                x[maxRow][i] = value++;
             }
-            maxH--;
+            maxRow--;
 
             // Cot trai cung chua ghi
-            for (int i = maxH; i >= minH; i--) {
-                x[i][minC] = value++;
+            for (int i = maxRow; i >= minRow; i--) {
+                x[i][minCol] = value++;
             }
-            minC++;
+            minCol++;
         }
     }
 
