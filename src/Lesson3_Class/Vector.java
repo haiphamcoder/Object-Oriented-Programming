@@ -4,6 +4,7 @@ public class Vector {
     // attributes
     private int x;
     private int y;
+    private int z;
 
     // default constructor
     public Vector() {
@@ -11,9 +12,10 @@ public class Vector {
     }
 
     // parameterized constructor
-    public Vector(int x, int y) {
+    public Vector(int x, int y, int z) {
         this.x = x;
         this.y = y;
+        this.z = z;
     }
 
     // accessor and mutator methods
@@ -33,24 +35,32 @@ public class Vector {
         this.y = y;
     }
 
+    public int getZ() {
+        return z;
+    }
+
+    public void setZ(int z) {
+        this.z = z;
+    }
+
     public Vector addition(Vector other) {
-        return new Vector(this.x + other.x, this.y + other.y);
+        return new Vector(this.x + other.x, this.y + other.y, this.z + other.z);
     }
 
     public Vector subtraction(Vector other) {
-        return new Vector(this.x - other.x, this.y - other.y);
+        return new Vector(this.x - other.x, this.y - other.y, this.z - other.z);
     }
 
     public Vector multiplyByConstant(int n) {
-        return new Vector(this.x * n, this.y * n);
+        return new Vector(this.x * n, this.y * n, this.z * n);
     }
 
     public int multiplyScalar(Vector other) {
-        return this.x * other.x + this.y * other.y;
+        return this.x * other.x + this.y * other.y + this.z * other.z;
     }
 
     @Override
     public String toString() {
-        return "(" + x + "; " + y + ")";
+        return "(" + x + "; " + y + "; "+ z +")";
     }
 }
