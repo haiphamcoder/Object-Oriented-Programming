@@ -56,6 +56,7 @@ public class NhanVien {
             return false;
         }
         this.heSoLuong = this.heSoLuong + tang;
+        System.out.println("Duoc tang luong");
         return true;
     }
 

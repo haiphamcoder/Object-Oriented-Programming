@@ -15,7 +15,6 @@ public class Square {
     }
 
     // accessor and mutator methods
-
     public int getSide() {
         return side;
     }

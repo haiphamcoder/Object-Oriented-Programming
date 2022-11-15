@@ -2,7 +2,7 @@ package Lesson4_CreationAndUsingClass;
 
 import java.util.Scanner;
 
-public class Exercise1 {
+public class TestBook {
     public static Scanner keyboard = new Scanner(System.in);
 
     public static void main(String[] args) {
