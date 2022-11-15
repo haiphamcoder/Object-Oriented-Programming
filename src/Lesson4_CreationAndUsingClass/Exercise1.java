@@ -23,27 +23,39 @@ public class Exercise1 {
                     System.out.println("######################################");
                     System.out.print("Enter your option (1,2,3): ");
                     option = Integer.parseInt(keyboard.nextLine());
+                    System.out.println();
                     if (option == 1) {
-                        System.out.print("\t- Enter the name of book: ");
-                        String name = keyboard.nextLine();
-                        System.out.print("\t- Enter the author of book: ");
-                        String author = keyboard.nextLine();
-                        System.out.print("\t- Enter the number of page for book: ");
-                        int page = Integer.parseInt(keyboard.nextLine());
-                        books[Book.numberOfBook] = new Book(name, author, page);
+                        if (Book.numberOfBook == maximum) {
+                            System.out.println("The number of books is maximum.");
+                        } else {
+                            System.out.print("\t- Enter the name of book: ");
+                            String name = keyboard.nextLine();
+                            System.out.print("\t- Enter the author of book: ");
+                            String author = keyboard.nextLine();
+                            System.out.print("\t- Enter the number of page for book: ");
+                            int page = Integer.parseInt(keyboard.nextLine());
+                            books[Book.numberOfBook] = new Book(name, author, page);
+                        }
 
                     } else if (option == 2) {
+                        int totalPages = 0;
+                        System.out.printf("| %-21s | %-10s |\n", "Name's book", "Page");
+                        System.out.println("--------------------------------------");
                         for (int i = 0; i < Book.numberOfBook; i++) {
-                            System.out.println("Book " + (i + 1) + ": ");
-                            System.out.println("\t- Name: " + books[i].getName());
-                            System.out.println("\t- Author: " + books[i].getAuthor());
-                            System.out.println("\t- Number of page: " + books[i].getNumberOfPage());
+                            String name = books[i].getName();
+                            int page = books[i].getNumberOfPage();
+                            totalPages += page;
+                            System.out.printf("| %-21s | %-10s |\n", name.length() > 21 ? name.substring(0, 18) + "..." : name, page);
                         }
+                        System.out.println("--------------------------------------");
+                        System.out.println("The total of pages for all books: " + totalPages);
                     } else if (option == 3) {
                         break;
                     } else {
                         System.out.println("Option is not found!");
                     }
+                    System.out.print("\nPress Enter to continue...");
+                    keyboard.nextLine();
                 }
             } else {
                 System.out.println("Error: The maximum number of elements for a book array must be a positive number.");
