@@ -44,19 +44,19 @@ public class Vector {
     }
 
     public Vector addition(Vector other) {
-        return new Vector(this.x + other.x, this.y + other.y, this.z + other.z);
+        return new Vector(x + other.x, y + other.y, z + other.z);
     }
 
     public Vector subtraction(Vector other) {
-        return new Vector(this.x - other.x, this.y - other.y, this.z - other.z);
+        return new Vector(x - other.x, y - other.y, z - other.z);
     }
 
     public Vector multiplyByConstant(int n) {
-        return new Vector(this.x * n, this.y * n, this.z * n);
+        return new Vector(x * n, y * n, z * n);
     }
 
     public int multiplyScalar(Vector other) {
-        return this.x * other.x + this.y * other.y + this.z * other.z;
+        return x * other.x + y * other.y + z * other.z;
     }
 
     @Override

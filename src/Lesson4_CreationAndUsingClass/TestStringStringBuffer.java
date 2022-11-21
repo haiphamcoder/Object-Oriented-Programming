@@ -5,7 +5,7 @@ public class TestStringStringBuffer {
         System.out.println("Task: Add 100000 strings of \"Hello\" together.");
         long start = System.currentTimeMillis();
         String str = "";
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             str += "Hello ";
         }
         long end = System.currentTimeMillis();
@@ -13,7 +13,7 @@ public class TestStringStringBuffer {
 
         start = System.currentTimeMillis();
         StringBuffer buffer = new StringBuffer();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             buffer.append("Hello ");
         }
         end = System.currentTimeMillis();

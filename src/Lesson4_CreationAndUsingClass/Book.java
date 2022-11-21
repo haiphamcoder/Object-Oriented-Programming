@@ -12,7 +12,7 @@ public class Book {
     public Book(String name, String author, int nbrPage) {
         this.name = name;
         this.author = author;
-        this.numberOfPage = nbrPage;
+        numberOfPage = nbrPage;
         numberOfBook++;
     }
 

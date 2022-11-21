@@ -51,11 +51,11 @@ public class NhanVien {
     }
 
     public boolean tangLuong(double tang) {
-        if (this.luongCoBan * (this.heSoLuong + tang) > this.LUONG_MAX) {
+        if (luongCoBan * (heSoLuong + tang) > LUONG_MAX) {
             System.out.println("Khong the tang luong!");
             return false;
         }
-        this.heSoLuong = this.heSoLuong + tang;
+        heSoLuong = heSoLuong + tang;
         System.out.println("Duoc tang luong");
         return true;
     }
@@ -65,10 +65,10 @@ public class NhanVien {
     }
 
     public void inTTin() {
-        System.out.println("Ten nhan vien: " + this.tenNhanVien);
-        System.out.println("\t- Luong co ban: " + this.luongCoBan + "$");
-        System.out.println("\t- He so luong: " + this.heSoLuong);
+        System.out.println("Ten nhan vien: " + tenNhanVien);
+        System.out.println("\t- Luong co ban: " + luongCoBan + "$");
+        System.out.println("\t- He so luong: " + heSoLuong);
         System.out.println("\t- Luong hien tai: " + tinhLuong() + "$");
-        System.out.println("\t- Luong toi da: " + this.LUONG_MAX + "$\n");
+        System.out.println("\t- Luong toi da: " + LUONG_MAX + "$\n");
     }
 }
