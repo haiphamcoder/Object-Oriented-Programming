@@ -1,7 +1,5 @@
 package Lesson5_AggregationAndInheritance;
 
-import Lesson3_Class.NhanVien;
-
 public class TruongPhong extends NhanVien {
     // attributes
     private double phuCap;
