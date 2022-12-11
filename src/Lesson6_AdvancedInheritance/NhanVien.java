@@ -1,4 +1,4 @@
-package Lesson5_AggregationAndInheritance;
+package Lesson6_AdvancedInheritance;
 
 public class NhanVien {
     // attributes
