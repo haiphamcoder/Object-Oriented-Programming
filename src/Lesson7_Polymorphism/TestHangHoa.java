@@ -11,13 +11,13 @@ public class TestHangHoa {
         cal.set(2023, Calendar.APRIL, 15);
         Date hsd = cal.getTime();
 
-        HangDienMay hangDienMay = new HangDienMay("DM1011", "May loc khong khi", "Xiaomi", 5000000, 5, 220, 50);
-        HangHoa hangSanhSu = new HangSanhSu("SS2132", "Khay mut tet", "Gom Su Viet", 2500000, "Dat nung");
-        HangHoa hangThucPham1 = new HangThucPham("TP3544", "Choco-Pie 20 cai", "Orion", 88000, nsx, hsd);
-        HangThucPham hangThucPham2 = (HangThucPham) hangThucPham1;
+        HangHoa[] dsHangHoa = new HangHoa[3];
+        dsHangHoa[0] = new HangDienMay("DM1011", "May loc khong khi", "Xiaomi", 5000000, 5, 220, 50);
+        dsHangHoa[1] = new HangSanhSu("SS2132", "Khay mut tet", "Gom Su Viet", 2500000, "Dat nung");
+        dsHangHoa[2] = new HangThucPham("TP3544", "Choco-Pie 20 cai", "Orion", 88000, nsx, hsd);
 
-        hangDienMay.inThongTin();
-        hangSanhSu.inThongTin();
-        hangThucPham2.inThongTin();
+        for(HangHoa x:dsHangHoa){
+            x.inThongTin();
+        }
     }
 }
