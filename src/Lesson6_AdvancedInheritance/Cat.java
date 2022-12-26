@@ -22,12 +22,12 @@ public class Cat extends Animal implements CanEat, CanDrink {
     }
 
     @Override
-    public void back(Graphics g, int x, int y) {
+    public void back() {
         System.out.println("back from Cat");
     }
 
     @Override
-    public void getVelocity(Graphics g) {
+    public void getVelocity() {
         System.out.println("getVelocity from Cat");
     }
 }
